@@ -1,0 +1,112 @@
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: rgb(29, 28, 36);
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+/* NAV BAR */
+
+.logo{
+    width: 13%;
+    transition: all .2s ease-in-out; 
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    
+}
+
+.navbar{
+    background-color: rgb(22, 20, 20) ;
+}
+
+/* Menu Plataformas */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: aliceblue;
+}
+
+.logo-consolas{
+    width: 60%;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9));
+    transition: all .2s ease-in-out; 
+}        
+
+.logo-consolas:hover {
+    transform: scale(1.1);
+  }
+
+  .glitch {
+    font-size: 200%;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff;
+    letter-spacing: 5px;
+    
+    &:before, &:after {
+      display: block;
+      content: attr(data-glitch);
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: .8;
+    } &:after {
+      color: #f0f;
+      z-index: -2;
+    } &:before {
+      color: #0ff;
+      z-index: -1;
+    }
+    &:hover {
+      &:before {
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both 5
+      }
+      &:after {
+        animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both 5
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .glitch {
+      font-size: 3em;
+    }
+  }
+  
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0)
+    }
+    20% {
+      transform: translate(-5px, 5px)
+    }
+    40% {
+      transform: translate(-5px, -5px)
+    }
+    60% {
+      transform: translate(5px, 5px)
+    }
+    80% {
+      transform: translate(5px, -5px)
+    }
+    to {
+      transform: translate(0)
+    }
+  }
+
+  @import url(style.scss);
